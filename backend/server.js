@@ -17,6 +17,13 @@ app.use(express.json());
 const projectsFilePath = path.join(__dirname, 'projects.json');
 let projects = JSON.parse(fs.readFileSync(projectsFilePath, 'utf8'));
 
+// Load/Initialize contacts data
+const contactsFilePath = path.join(__dirname, 'contacts.json');
+let contacts = [];
+if (fs.existsSync(contactsFilePath)) {
+  contacts = JSON.parse(fs.readFileSync(contactsFilePath, 'utf8'));
+}
+
 // Routes
 
 // GET all projects
@@ -93,6 +100,39 @@ app.delete('/projects/:id', (req, res) => {
   } catch (error) {
     res.status(400).json({ error: 'Failed to delete project' });
   }
+});
+
+// POST new contact message
+app.post('/contact', (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: 'Name, email, and message are required' });
+    }
+    
+    const newContact = {
+      id: `c${Date.now()}`,
+      name,
+      email,
+      message,
+      createdAt: new Date().toISOString()
+    };
+    
+    contacts.push(newContact);
+    
+    // Save to file
+    fs.writeFileSync(contactsFilePath, JSON.stringify(contacts, null, 2));
+    
+    res.status(201).json(newContact);
+  } catch (error) {
+    res.status(400).json({ error: 'Failed to save contact message' });
+  }
+});
+
+// GET all contact messages
+app.get('/contact', (req, res) => {
+  res.json(contacts);
 });
 
 // Health check

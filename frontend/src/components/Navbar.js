@@ -33,9 +33,6 @@ export default function Navbar() {
           <Link to="/contact" onClick={closeMenu}>
             Contact
           </Link>
-          <Link to="/admin" onClick={closeMenu}>
-            Admin
-          </Link>
         </div>
       </nav>
       {menuOpen && (

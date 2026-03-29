@@ -64,21 +64,22 @@ export default function Home() {
       </section>
 
       <section className="projects">
-        <h1>LATEST PROJECT</h1>
+        <h1>LATEST PROJECTS</h1>
         {loading ? (
           <p>Loading projects...</p>
         ) : (
-          <div className="project-grid">
+          <div className="grid">
             {projects.map((p) => (
               <div
                 key={p.id}
-                className="project-card"
+                className="card"
                 onClick={() => navigate(`/projects/${p.id}`)}
                 style={{ cursor: "pointer" }}
               >
                 <img src={p.image || "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200"} alt={p.title} />
                 <div className="card-overlay">
                   <h3>{p.title}</h3>
+                  <p>{p.location}</p>
                 </div>
               </div>
             ))}
