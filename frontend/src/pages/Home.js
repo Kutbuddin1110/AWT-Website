@@ -12,8 +12,8 @@ export default function Home() {
     api
       .get("/projects")
       .then((res) => {
-        // Get first 3 projects for the home page showcase
-        setProjects(res.data.slice(0, 3) || []);
+        // Get first 2 projects for the home page showcase
+        setProjects(res.data.slice(0, 2) || []);
       })
       .catch((err) => {
         console.error(err);
