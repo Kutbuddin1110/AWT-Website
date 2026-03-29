@@ -1,0 +1,494 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  max-width: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.hero-content h3 {
+  font-size: clamp(14px, 2vw, 18px);
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.hero-content h1 {
+  font-size: clamp(32px, 8vw, 90px);
+  margin: 10px 0;
+}
+
+.hero-content button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  font-size: 14px;
+}
+
+.hero-content button:hover {
+  transform: scale(1.05);
+}
+
+.offer {
+  background: #222;
+  color: white;
+}
+
+.offer h1 {
+  font-size: clamp(32px, 6vw, 50px);
+}
+
+.offer-items {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.offer-items div {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.projects {
+  background: white;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.project-card,
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width: 100%;
+}
+
+.project-card img,
+.card img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 20px 0 0 20px;
+}
+
+.project-card:hover img,
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card:focus,
+.card:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.project-card:active,
+.card:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.card-overlay {
+  position: relative;
+  width: 50%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 20px 20px 0;
+}
+
+.card-overlay h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.card-overlay p {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.card:focus {
+  outline: none;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 60vh;
+}
+
+.contact form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact input,
+.contact textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.contact button {
+  background: #222;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.contact button:hover {
+  transform: scale(1.02);
+}
+
+/* TABLET (768px - 1024px) */
+@media (max-width: 1024px) {
+  section {
+    padding: 60px 8%;
+  }
+
+  .offer-items {
+    flex-direction: column;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .project-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card img,
+  .project-card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-overlay,
+  .project-card .card-overlay {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+/* MOBILE (480px - 768px) */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 5%;
+  }
+
+  .hero {
+    height: 80vh;
+    min-height: 400px;
+  }
+
+  .hero-content {
+    top: 50%;
+    left: 5%;
+    max-width: 90%;
+    transform: translateY(-50%);
+  }
+
+  .hero-content h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+    margin: 5px 0 15px 0;
+  }
+
+  .hero-content button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .offer h1 {
+    font-size: 32px;
+  }
+
+  .offer-items div {
+    min-width: 100%;
+    padding: 15px;
+  }
+
+  .card,
+  .project-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card img,
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-overlay,
+  .project-card .card-overlay {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .card-overlay h3 {
+    font-size: 18px;
+  }
+
+  .project-card img,
+  .card img {
+    height: 220px;
+  }
+
+  .contact {
+    gap: 20px;
+  }
+
+  .contact form {
+    padding: 20px;
+  }
+
+  .contact input,
+  .contact textarea {
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+}
+
+/* SMALL MOBILE (up to 480px) */
+@media (max-width: 480px) {
+  section {
+    padding: 40px 4%;
+  }
+
+  .hero {
+    height: 70vh;
+    min-height: 350px;
+  }
+
+  .hero-content {
+    top: 50%;
+    left: 4%;
+    max-width: 92%;
+    transform: translateY(-50%);
+  }
+
+  .hero-content h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    margin: 5px 0 15px 0;
+  }
+
+  .hero-content button {
+    padding: 10px 16px;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .offer h1,
+  .offer h1 {
+    font-size: 24px;
+  }
+
+  .offer-items {
+    gap: 15px;
+  }
+
+  .offer-items div {
+    padding: 12px;
+  }
+
+  .offer-items div h3 {
+    font-size: 16px;
+  }
+
+  .offer-items div p {
+    font-size: 13px;
+  }
+
+  .project-grid {
+    gap: 15px;
+  }
+
+  .card,
+  .project-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-card img,
+  .card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-overlay,
+  .project-card .card-overlay {
+    width: 100%;
+    padding: 12px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .card-overlay h3 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+  }
+
+  .card-overlay p {
+    font-size: 12px;
+  }
+
+  .contact {
+    gap: 15px;
+  }
+
+  .contact form {
+    padding: 15px;
+  }
+
+  .contact input,
+  .contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .contact button {
+    padding: 10px;
+  }
+}
+
+/* LANDSCAPE MODE */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    height: 120vh;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+}
+
+/* HIGH DPI SCREENS (Retina displays) */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+/* PRINT STYLES */
+@media print {
+  section {
+    page-break-inside: avoid;
+  }
+
+  button {
+    display: none;
+  }
+}
+

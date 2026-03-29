@@ -1,0 +1,79 @@
+[
+  {
+    "id": "p1",
+    "title": "Modern Villa",
+    "location": "Seattle, Washington",
+    "description": "A stunning contemporary villa featuring cutting-edge architecture and premium finishes throughout.",
+    "type": "Residential",
+    "year": "2023",
+    "area": "8,500 sq ft",
+    "status": "Completed",
+    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200",
+    "details": [
+      "5 Bedrooms, 4.5 Bathrooms",
+      "Smart Home Integration",
+      "Infinity Pool & Spa",
+      "Private Wine Cellar",
+      "Home Theater System",
+      "Solar Energy System"
+    ]
+  },
+  {
+    "id": "p2",
+    "title": "Minimal City Home",
+    "location": "Austin, Texas",
+    "description": "A modern minimalist apartment in the heart of the city with sleek design and sustainable features.",
+    "type": "Residential",
+    "year": "2022",
+    "area": "5,200 sq ft",
+    "status": "Completed",
+    "image": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200",
+    "details": [
+      "3 Bedrooms, 2 Bathrooms",
+      "Open Floor Plan",
+      "Energy-Efficient Windows",
+      "Rooftop Garden",
+      "Smart Lighting System",
+      "EV Charging Station"
+    ]
+  },
+  {
+    "id": "p3",
+    "title": "Luxury Estate",
+    "location": "Miami, Florida",
+    "description": "An exclusive waterfront estate with panoramic ocean views and world-class amenities.",
+    "type": "Residential",
+    "year": "2023",
+    "area": "12,000 sq ft",
+    "status": "Completed",
+    "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200",
+    "details": [
+      "6 Bedrooms, 5 Bathrooms",
+      "Waterfront Access",
+      "Beach Club Membership",
+      "Tennis Court",
+      "Private Dock",
+      "Gourmet Kitchen",
+      "Home Automation System"
+    ]
+  },
+  {
+    "id": "p4",
+    "title": "Green Urban Home",
+    "location": "San Francisco, California",
+    "description": "Sustainable urban residence with eco-friendly features and modern design principles.",
+    "type": "Residential",
+    "year": "2024",
+    "area": "6,000 sq ft",
+    "status": "In Progress",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200",
+    "details": [
+      "4 Bedrooms, 3 Bathrooms",
+      "Solar Energy System",
+      "Rainwater Harvesting",
+      "Smart Thermostat",
+      "Rooftop Garden",
+      "Recycled Materials"
+    ]
+  }
+]
