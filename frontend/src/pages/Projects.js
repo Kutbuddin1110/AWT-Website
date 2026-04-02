@@ -31,7 +31,7 @@ export default function Projects() {
       {!loading && !error && projects.length === 0 && <p>No projects available</p>}
       <div className="grid">
         {projects.map((p) => (
-          <div className="card" key={p.id} onClick={() => handleCardClick(p.id)} style={{ cursor: "pointer" }}>
+          <div className="card" key={p._id} onClick={() => handleCardClick(p._id)} style={{ cursor: "pointer" }}>
             <img src={p.image || "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200"} alt={p.title} />
             <div className="card-overlay">
               <h3>{p.title}</h3>

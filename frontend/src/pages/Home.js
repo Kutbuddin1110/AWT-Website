@@ -71,9 +71,9 @@ export default function Home() {
           <div className="grid">
             {projects.map((p) => (
               <div
-                key={p.id}
+                key={p._id}
                 className="card"
-                onClick={() => navigate(`/projects/${p.id}`)}
+                onClick={() => navigate(`/projects/${p._id}`)}
                 style={{ cursor: "pointer" }}
               >
                 <img src={p.image || "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200"} alt={p.title} />
